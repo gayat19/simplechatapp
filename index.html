@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Connect Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        button {
+            background-color: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello! Welcome to Chat</h1>
+        <button onclick="startChat()">Start Chat</button>
+    </div>
+
+    <script type="text/javascript">
+  (function(w, d, x, id){
+    s=d.createElement('script');
+    s.src='https://g3demo.my.connect.aws/connectwidget/static/amazon-connect-chat-interface-client.js';
+    s.async=1;
+    s.id=id;
+    d.getElementsByTagName('head')[0].appendChild(s);
+    w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+  })(window, document, 'amazon_connect', '536e31cb-6097-41ba-860b-eec9782ad9b1');
+  amazon_connect('styles', { iconType: 'CHAT_VOICE', openChat: { color: '#ffffff', backgroundColor: '#123456' }, closeChat: { color: '#ffffff', backgroundColor: '#123456'} });
+  amazon_connect('snippetId', 'QVFJREFIZ1NqZWV5MTExbXUwZXRHZUlvQ2NPT3RQZ1k4bTl0VDhTaTZYcy9YcFVCVHdHN29NRUI2MlRaby9PKzAwclAvMDNVQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNdExySFJoZXZKSDBwcERRMUFnRVFnQ3U5VnZJOTJwaE1wSnNyMEMxcmFRc1UvSWdvSW9RREw2blRVY0VWT3RuUDRENnNkRG9sQUt0aDVpU0c6OmoyQ0R5ZUpUMXY0VlFiT09UeG5nbFFNZ1djOSsyZElDV1NacUhiMGlNdFRmZEZHSWFCMXRubVdOMk5HRmJWTWh2TlZaaTEvUjhMZlpRS0ZRdENoZ3djb3NtalJmL2h4OGl3Y1lFMlU4bjhmOHl5STdmSGhDMEgxbUZkb1g0cjhqVGVnKzhkLzhoVDQxcHRyRGxocEppRXhsRVhCb1NSdz0=');
+  amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown', 'application/vnd.amazonaws.connect.message.interactive', 'application/vnd.amazonaws.connect.message.interactive.response' ]);
+</script>
+    
+</body>
+</html>
